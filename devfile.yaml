@@ -26,9 +26,9 @@ components:
       - name: CICS_PORT
         value: '33061'
       - name: CICS_USER
-        value: wxadmin
+        value: uuuuu
       - name: CICS_PASSWORD
-        value: wxadmin
+        value: ppppp
     memoryLimit: 4927M
     type: dockerimage
     image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.66'
