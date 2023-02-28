@@ -1,13 +1,14 @@
 ---
 apiVersion: 1.0.0
 metadata:
-  name: apiProject
+  name: sample-cics-api
 projects:
-  - name: apiProject
+  - name: catalog-manager-api
     source:
-      location: https://github.ibm.com/edwardmc/ocpLocalDemo.git
+      location: 'https://github.com/zosconnect/sample-cics-api.git'
       type: github
       branch: main
+      sparseCheckoutDir: start
 components:
   - mountSources: true
     endpoints:
@@ -20,15 +21,7 @@ components:
         port: 9080
     env:
       - name: ZCON_DESIGNER_PROJECT
-        value: /projects/CatalogManagerApi/start
-      - name: CICS_HOST
-        value: wtsc55.cpolab.ibm.com
-      - name: CICS_PORT
-        value: '33061'
-      - name: CICS_USER
-        value: uuuuu
-      - name: CICS_PASSWORD
-        value: ppppp
+        value: /projects/catalog-manager-api/start
     memoryLimit: 4927M
     type: dockerimage
     image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.66'
