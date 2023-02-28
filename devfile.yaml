@@ -24,7 +24,7 @@ components:
       - name: CICS_HOST
         value: wtsc55.cpolab.ibm.com
       - name: CICS_PORT
-        value: 33061
+        value: '33061'
       - name: CICS_USER
         value: wxadmin
       - name: CICS_PASSWORD
